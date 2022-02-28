@@ -1,4 +1,5 @@
-
+#define newline '\n';
+using namespace std;
 int add(int a,int b){
   int c;
   int d;
@@ -22,12 +23,23 @@ int sqrt(float in){
   }
   a = num-1;
   while(true){
-    a = a-1;
+    num = num-1;
     tot = num*num;
+    
     if(tot<in){
       break;
     } 
   }
+  cout<<newline;
+  cout<<"Calculating...";
+  cout<<newline;
+  while(true){
+    num = num+0.000001;
+    tot = num*num;
+    if(tot>in){
+      break;
+    }
+  }
+  cout<<newline;
   return num-1;
-  
 }
