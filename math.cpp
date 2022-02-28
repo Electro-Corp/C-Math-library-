@@ -12,34 +12,19 @@ int add(int a,int b){
   return c;
 }
 int sqrt(float in){
-  float num;
+  float num = 0;
   float tot;
   float a;
-  num = 0;
-  tot = 0;
-  while(in>tot){
-    tot = num*num;
-    num = num+1;
+  int i; 
+  for (tot = 0; i > tot; ++num) {
+    tot = num * num;
   }
-  a = num-1;
-  while(true){
-    num = num-1;
-    tot = num*num;
-    
-    if(tot<in){
-      break;
-    } 
+  a = num - 1;
+  while (tot >= in) {
+    a = a - 1;
+    tot = num * num;
   }
+  return num - 1;
   cout<<newline;
-  cout<<"Calculating...";
-  cout<<newline;
-  while(true){
-    num = num+0.000001;
-    tot = num*num;
-    if(tot>in){
-      break;
-    }
-  }
-  cout<<newline;
-  return num-1;
+
 }
