@@ -26,10 +26,8 @@ int sqrt(float in){
     tot = num*num;
     if(tot<in){
       break;
-    }
-    
+    } 
   }
-  
   return num-1;
   
 }
